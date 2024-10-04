@@ -16,15 +16,15 @@ public class Banco {
     }
 
     public int getConta() {
-        return this.conta;
+        return conta;
     }
 
     public int getAgencia() {
-        return this.agencia;
+        return agencia;
     }
 
     public double getSaldo() {
-        return this.saldo;
+        return saldo;
     }
 }
 
