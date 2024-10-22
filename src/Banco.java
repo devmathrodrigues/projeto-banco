@@ -2,17 +2,27 @@ public class Banco {
     private int conta;
     private int agencia;
     private double saldo;
+    private TipoConta tipoConta;
 
-    public void setConta(int conta) {
+    public Banco(int conta, int agencia, double saldo, TipoConta tipoConta) {
         this.conta = conta;
-    }
-
-    public void setAgencia(int agencia) {
         this.agencia = agencia;
+        this.saldo = saldo;
+        this.tipoConta = tipoConta;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
+    public void calcularRendimento() {
+        double rendimento = tipoConta.calcularRendimento(saldo);
+        System.out.println(this.saldo);
+        this.saldo += rendimento;
+    }
+
+    public void setTipoConta(TipoConta tipoConta) {
+        this.tipoConta = tipoConta;
+    }
+
+    public TipoConta getTipoConta() {
+        return tipoConta;
     }
 
     public int getConta() {
@@ -27,6 +37,7 @@ public class Banco {
         return saldo;
     }
 }
+
 
 
 
